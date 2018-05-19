@@ -12,5 +12,26 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require bootstrap
+//= require jquery.mmenu.js
 //= require_tree .
+
+//sliding nav menu settings
+$(document).ready(function() {
+  $("#menu").mmenu({
+    "extensions": [
+      "pagedim-black",
+      "theme-light",
+      "listview-center",
+      "fx-listitems-slide"
+    ],
+    "offCanvas": {
+      "position": "right"
+    },
+    "navbars": [
+      {
+      
+      }
+    ]
+  });
+});
