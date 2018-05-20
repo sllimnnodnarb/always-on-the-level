@@ -14,41 +14,49 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Coming+Soon|Montserrat|Amatic+SC|Raleway|Tinos" rel="stylesheet">
   </head>
-  <div class="navbar">
-    <div class="row bpad15">
-      <div class="col-md-3 font2point5rem blackfont logofont pad25 lmar25 pull-left dispin posrel">ALWAYS ON THE LEVEL<br>SEPTIC MAINTENANCE
+  <div class="navbar bmar0 bpad0">
+    <div class="row">
+      <div class="col-md-4 font2point5rem blackfont logofont pad25 lmar25 pull-left dispin posrel blackfont">
+        <%= link_to(root_path, class: "nodec blackfont") do %>
+          ALWAYS ON THE LEVEL<br />
+          SEPTIC MAINTENANCE
+        <% end %>
       </div>
-      <div class="col-md-6 whitefont font4rem tmar20 tcent ralefont">
+      <div class="col-md-4 whitefont font4rem tmar20 tcent ralefont">
         <btn class="navcallbtn whitefont nodec pad15 lpad25 rpad25 hvr-sweep-to-right" href="tel:2103786096 whitefont"><span class="glyphicon glyphicon-earphone whitefont rmar15"></span><span class="whitefont">210.378.6096</span></btn>
       </div>
+      <div class="col-md-4 pull-right tmar25 wid100per zplus1 rmar0 lmar0 lpad0 bmar0 bpad0">
+        <a href="#menu" class="glyphicon glyphicon-menu-hamburger ccfont pull-right nodec posfx lmar90per tmar50 rmar0 rpad25" id="hamburger">
+        </a>
+        <nav id="menu" class="font2rem tcent ralefont z100 tmar150">
+          <ul class="rmar25 tmar50 font2rem ralefont">
+            <li class="hvr-glow pad25">
+              <%= link_to "Home", root_path, class: "font2point5rem" %>
+            </li>
+            <li class="hvr-glow pad25">
+              <%= link_to "Services", welcome_services_path, class: "font2point5rem" %>
+            </li>
+            <li class="hvr-glow pad25">
+              <%= link_to "Septic Installation", welcome_install_path, class: "font2point5rem" %>
+            </li>
+            <li class="hvr-glow">
+              <%= link_to "Aerobic Septic Maintenance", welcome_maintenance_path, class: "font2point5rem" %>
+            </li>
+            <li class="hvr-glow">
+              <%= link_to "Lift Station Repairs", welcome_lift_path, class: "font2point5rem" %>
+            </li>
+            <li class="hvr-glow">
+              <%= link_to "About Us", welcome_about_path, class: "font2point5rem" %>
+            </li>
+            <li>
+              <%= link_to "Contact Us", welcome_contact_path, class: "font2point5rem" %>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
-    <div class="col-md-3 pull-right tmar25 wid100per zplus1 rmar0 rmar25 lmar0 lpad0">
-      <a href="#menu" class="glyphicon glyphicon-menu-hamburger ccfont pull-right nodec posfx lmar90per tmar50 rmar0 rpad25" id="hamburger">
-      </a>
-      <nav id="menu" class="font2rem tcent ralefont z100 tmar150">
-        <ul class="rmar25 tmar50 font2rem ralefont">
-          <li class="hvr-glow pad25">
-            <%= link_to "Septic Installation", welcome_septic_install_path, class: "font2point5rem" %>
-          </li>
-          <li class="hvr-glow">
-            <%= link_to "Aerobic Septic Maintenance", welcome_aerobic_maintenance_path, class: "font2point5rem" %>
-          </li>
-          <li class="hvr-glow">
-            <%= link_to "Lift Station Repairs", welcome_lift_station_path, class: "font2point5rem" %>
-          </li>
-          <li class="hvr-glow">
-            <%= link_to "About Us", welcome_about_path, class: "font2point5rem" %>
-          </li>
-          <li>
-            <%= link_to "Contact Us", welcome_contact_path, class: "font2point5rem" %>
-          </li>
-        </ul>
-      </nav>
-    </div>
   </div>
-  </div>
-  <body>
+  <body class="tmar0 tpad0">
     <%= yield %>
   </body>
   <%= render partial: 'welcome/map', locals: {welcome: @welcome } %>

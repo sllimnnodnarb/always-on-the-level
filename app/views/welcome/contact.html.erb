@@ -1,0 +1,44 @@
+<div class="installback tpad75 bpad75 picshad">
+  <div class="font5rem bldfnt whitefont ralefont tcent tpad75 bpad75 txtshadowblack">Contact Us
+  </div>
+</div>
+<div class="tpad50 bpad50 pad50 rpad50">
+  <div class="tealfont ralefont font2rem bolder lmar30 tcent">HAVE A QUESTION? LET US KNOW HOW WE CAN SERVE YOU.<br><br>
+  </div>
+  <div class="container bmar50 mailchimpformborder wid80per lmar10per tcent tmar25">
+      <div class="">
+        <h2 class="tcent bline"><br>Contact Us</h2>
+        <div class="tcent tpad25 hvr hvr-glow lpad25 rpad25 bmar25">
+          <div class='mailchimpborder tcent'>
+            <%= form_for :contact do |f| %>
+              <div class="row bpad15 wid100per">
+                <%= f.text_field :first_name, placeholder: 'First name', class:"wid200" %>
+              </div>
+              <div class="row bpad15">
+                <%= f.text_field :last_name, placeholder: 'Last name', class:"wid200" %>
+              </div>
+              <div class="row bpad15">
+                <%= f.text_field :address, placeholder: 'Address', class:"wid200" %>
+              </div>
+              <div class="row bpad15">
+                <%= f.text_field :email, placeholder: 'Email', class:"wid200" %>
+              </div>
+              <div class="row bpad15">
+                <%= f.telephone_field :phone, placeholder: 'Phone: xxx-xxx-xxxx', class:"wid200" %>
+              </div>
+              <div class="row bpad15">
+                <%= f.text_field :referral, placeholder: 'How did you hear about us?', class:"wid200" %>
+              </div>
+              <div class="row bpad15">
+                <%= f.text_area :message, placeholder: 'How can we assist you today?', class:"wid200" %>
+              </div>
+              <div class="row bpad15 hvr-sweep-to-right">
+                <%= f.submit "Submit", method: :contact, class: "font2point5rem blackbutton2 hvr hvr-sweep-to-right pad15 lpad25 rpad25 tcent tmar15 bmar25 posrel tcent" %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

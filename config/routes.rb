@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
+  get 'contacts/new'
+
+  get 'contacts/create'
+
   root 'welcome#index'
   get 'welcome/contact'
   get 'welcome/about'
-  get 'welcome/septic-install'
-  get 'welcome/aerobic-maintenance'
-  get 'welcome/lift-station'
+  get 'welcome/services'
+  get 'welcome/install'
+  get 'welcome/maintenance'
+  get 'welcome/lift'
+  post 'welcome/contact' => 'contacts#create', as: :contact
 end

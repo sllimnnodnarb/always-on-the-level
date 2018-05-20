@@ -24,6 +24,38 @@
 #my-menu:not(.mm-menu) {
   display: none!important;
 }
+.txtshadowblack {
+  text-shadow: 5px 2px black; 
+}
+
+.specialblackback {
+  background: url("black-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.installback {
+  background: url("septic-lids.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.maintback {
+  background: url("aerobic-maintenance.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.liftback {
+  background: url("lift-station-pumps.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ht50per {
+  height: 50%;
+  max-height: 400px;
+}
 
 .navbar {
   background: darkturquoise;
@@ -305,6 +337,7 @@ body.modal-open .mm-slideout {
 
 .ccfont {
   color: DimGray;
+  text-shadow: 2px 2px lightgray;
   font-size: 3rem;
   border: none;
   background-color: none;
@@ -935,18 +968,15 @@ input#user_legal {
 }
 
 .nodec {
-  text-decoration: none !important;
-  color: black !important;
+  text-decoration: none!important;
 }
 
 .nodec:hover {
-  text-decoration: none !important;
-  color: black !important;
+  text-decoration: none!important;
 }
 
 .nodec:visited {
-  text-decoration: none !important;
-  color: black !important;
+  text-decoration: none!important;
 }
 
 .nodec2 {
@@ -1294,7 +1324,7 @@ input#user_legal {
 }
 
 .lpad50 {
- padding-left: 50px;
+ padding-left: 50px!important;
 }
 
 .lpad60 {
@@ -1759,6 +1789,14 @@ input#user_legal {
   margin-left: 50px;
 }
 
+.lmar40 {
+  margin-left: 40px;
+}
+
+.lmar45 {
+  margin-left: 45px;
+}
+
 .rmar3per {
  margin-right: 3%;
 }
@@ -1827,8 +1865,18 @@ input#user_legal {
  float: right;
 }
 
+.heroback {
+  background-image: url("hero1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .wid200 {
   width: 200px;
+}
+
+.htauto {
+  height: auto;
 }
 
 .ht100 {
@@ -1917,6 +1965,10 @@ input#user_legal {
   text-align: center;
 }
 
+.tealline {
+  border-bottom: 1px solid teal;
+}
+
 .halfline {
   border-bottom: 1px solid lightgray;
   width: 50%;
@@ -1999,6 +2051,10 @@ input#user_legal {
 }
 
 .wid75per {
+  width: 75%;
+}
+
+.wid70per {
   width: 75%;
 }
 
@@ -2280,6 +2336,10 @@ input#user_legal {
   background-color: limegreen;
 }
 
+.whitesmokeground {
+  background-color: whitesmoke;
+}
+
 .darkgreenground {
   background-color: darkgreen;
 }
@@ -2381,6 +2441,18 @@ input#user_legal {
   color: black;
 }
 
+.tealfont {
+  color: teal;
+}
+
+.turqfont {
+  color: darkturquoise;
+}
+
+.darktealfont {
+  color: darkteal;
+}
+
 .darkbluefont {
   color: darkblue;
 }
@@ -2466,10 +2538,44 @@ input#user_legal {
   color: White;
 }
 
+.blackbutton2 {
+  background: black;
+  border: 1px solid black;
+  color: White!important;
+}
+
+.bldfnt {
+  font-weight: 700;
+}
+
 .turqbutton {
   background: darkteal;
   border: 1px solid black;
   color: White;
+}
+
+.turqbutton2 {
+  background: teal;
+  border: 1px solid black;
+  color: White;
+}
+
+.tealbutton {
+  background: white;
+  border: 1px solid black;
+  color: Black!important;
+}
+
+.whitebutton {
+  background: white;
+  border: 1px solid black;
+  color: black!important;
+}
+
+.herobutton {
+  background: darkteal;
+  border: 1px solid white;
+  color: White!important;
 }
 
 .navcallbtn {

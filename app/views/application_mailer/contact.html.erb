@@ -1,0 +1,15 @@
+<div class="container tcent dfont bline bmar0">
+  <div class="jumbotron bmar50">
+    <div class="row kfont font3rem">
+      <h2 class="bline bmar50 bline2 halfline lmar25per">Contact Request</h2>
+      <p>You have a new contact request from with the following information:</p><br>
+      <p>First name: <%= @contact.first_name %></p>
+      <p>Last name: <%= @contact.last_name %></p>
+      <p>Address: <%=@contact.address %></p>
+      <p>Email: <%= @contact.email %></p>
+      <p>Phone: <%= @contact.phone %></p>
+      <p>How did you hear about us? <%= @contact.referral %></p>
+      <p>Request: <%= @contact.message %></p><br>
+    </div>
+  </div>
+</div>
