@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get 'welcome/maintenance'
   get 'welcome/lift'
   post 'welcome/contact' => 'contacts#create', as: :contact
+  root 'welcome#index'
 end
