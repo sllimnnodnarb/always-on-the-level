@@ -11,8 +11,8 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
 //= require bootstrap
+//= require jquery_ujs
 //= require jquery.mmenu.js
 //= require_tree .
 

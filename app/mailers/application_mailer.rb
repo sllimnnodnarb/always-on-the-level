@@ -7,7 +7,7 @@ class ApplicationMailer < ActionMailer::Base
     @recipients =['mnddunn9@gmail.com', 'sllimnodnarb@gmail.com']
     mail(
       to: @recipients,
-      subject: "WellFence Website Contact Form Submission",
+      subject: "Always On The Level Website Contact Form Submission",
       template_path: 'application_mailer',
       template_name: 'contact')
   end
