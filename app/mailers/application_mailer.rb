@@ -1,5 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "mnddunn9@gmail.com"
+  default from: 'mnddunn9@gmail.com'
   layout 'mailer'
 
   def contact(contact)
