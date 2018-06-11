@@ -8,7 +8,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
 
     if @contact.save
-      if contact.nope?
+      if @contact.nope?
         redirect_to root_path
       else
         ApplicationMailer.contact(@contact).deliver_now
