@@ -8,12 +8,8 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
 
     if @contact.save
-      if contact.nope?
-        redirect_to root_path
-      else
-        ApplicationMailer.contact(@contact).deliver_now
-        flash.now[:notice] = 'Thank you for your message. We will contact you as soon as possible.'
-      end
+      ApplicationMailer.contact(@contact).deliver_now
+      flash.now[:notice] = 'Thank you for your message. We will contact you as soon as possible.'
     else
       flash.now[:error] = 'Cannot send message.'
       render :new
@@ -25,7 +21,7 @@ class ContactsController < ApplicationController
   private
 
   def contact_params
-    params.require(:contact).permit(:first_name, :last_name, :address, :phone, :email, :message, :referral, :nope)
+    params.require(:contact).permit(:first_name, :last_name, :address, :phone, :email, :message, :referral)
   end
 
   def spam_detected
