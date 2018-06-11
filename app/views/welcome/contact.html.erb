@@ -11,6 +11,7 @@
     <div class="tcent tpad25 hvr hvr-glow bmar25">
       <div class='tcent minwid200'>
         <%= form_for(:contact, html: {class: "wid100per"}) do |f| %>
+          <%= f.invisible_captcha :nope, visual_honeypots: true, sentence_for_humans: 'Do not fill this in if you are a human' %>
           <div class="row bpad15">
             <%= f.text_field :first_name, placeholder: 'First name', class:"" %>
           </div>
@@ -32,7 +33,6 @@
           <div class="row bpad15">
             <%= f.text_area :message, placeholder: 'How can we assist you today?', class:"" %>
           </div>
-          <div><%= invisible_captcha %></div>
           <div class="g-recaptcha" data-sitekey="6LcT1VwUAAAAAIjYU9g4XW4v0sQtWEHw6F2KX-NM"></div>
           <div class="row bpad15 hvr-sweep-to-right">
             <%= f.submit "Submit", method: :contact, class: "font2point5rem blackbutton2 hvr hvr-sweep-to-right pad15 lpad25 rpad25 tcent tmar15 bmar25 posrel tcent" %>
