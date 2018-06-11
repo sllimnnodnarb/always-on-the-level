@@ -8,8 +8,12 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
 
     if @contact.save
-      ApplicationMailer.contact(@contact).deliver_now
-      flash.now[:notice] = 'Thank you for your message. We will contact you as soon as possible.'
+      if contact.nope?
+        redirect_to root_path
+      else
+        ApplicationMailer.contact(@contact).deliver_now
+        flash.now[:notice] = 'Thank you for your message. We will contact you as soon as possible.'
+      end
     else
       flash.now[:error] = 'Cannot send message.'
       render :new

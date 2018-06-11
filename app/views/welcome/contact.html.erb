@@ -11,7 +11,7 @@
     <div class="tcent tpad25 hvr hvr-glow bmar25">
       <div class='tcent minwid200'>
         <%= form_for(:contact, html: {class: "wid100per"}) do |f| %>
-          <%= f.invisible_captcha :nope, visual_honeypots: true, sentence_for_humans: 'Do not fill this in if you are a human' %>
+          <%= f.text_field :nope, placeholder: 'Do not fill this in if you are a human' %>
           <div class="row bpad15">
             <%= f.text_field :first_name, placeholder: 'First name', class:"" %>
           </div>
