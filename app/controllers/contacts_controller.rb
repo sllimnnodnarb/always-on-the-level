@@ -24,8 +24,4 @@ class ContactsController < ApplicationController
     params.require(:contact).permit(:first_name, :last_name, :address, :phone, :email, :message, :referral)
   end
 
-  def spam_detected
-    redirect_to root_path, alert "Spam Detected"
-  end
-
 end
