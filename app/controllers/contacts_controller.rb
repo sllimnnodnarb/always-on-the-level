@@ -1,4 +1,5 @@
 class ContactsController < ApplicationController
+  skip_before_action :authenticate_user!
 
   def new
     @contact = Contact.new
@@ -9,11 +10,11 @@ class ContactsController < ApplicationController
 
     if @contact.save && @contact.nope.present?
       flash.now[:notice] = 'You are a robot, you have no soul, and the soul of your creator is in jeopardy.  Repent and believe in Jesus Christ alone for salvation this very day.'
+      exit
 
-    elsif @contact.save && @contact.nope = nil
-        ApplicationMailer.contact(@contact).deliver_now
-        flash.now[:notice] = 'Thank you for your message. We will contact you as soon as possible.'
     else
+      ApplicationMailer.contact(@contact).deliver_now
+      flash.now[:notice] = 'Thank you for your message. We will contact you as soon as possible.'
       flash.now[:error] = 'Cannot send message.'
     end
 
