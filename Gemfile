@@ -34,4 +34,3 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'puma', '~> 3.0'
 gem 'mmenu-rails'
 gem 'recaptcha', require: 'recaptcha/rails'
-gem 'invisible_captcha'
