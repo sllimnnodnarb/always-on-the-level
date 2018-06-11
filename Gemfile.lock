@@ -65,6 +65,8 @@ GEM
       activesupport (>= 4.2.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
+    invisible_captcha (0.10.0)
+      rails (>= 3.2.0)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -204,6 +206,7 @@ DEPENDENCIES
   bootstrap-sass
   byebug
   coffee-rails (~> 4.2)
+  invisible_captcha
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
