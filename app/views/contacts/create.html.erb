@@ -1,2 +1,43 @@
-<h1>Contacts#create</h1>
-<p>Find me in app/views/contacts/create.html.erb</p>
+<div class="installback tpad75 bpad75 picshad">
+  <div class="font5rem bldfnt whitefont ralefont tcent tpad75 bpad75 txtshadowblack">Contact Us
+  </div>
+</div>
+<div class="tpad50 bpad50 rpad50 tcent">
+  <div class="tealfont ralefont font2rem bolder lmar30 tcent">HAVE A QUESTION? LET US KNOW HOW WE CAN SERVE YOU.<br><br>
+  </div>
+</div>
+  <div class="bmar50 mailchimpformborder tcent tmar25 wid90per lmar5per">
+    <h2 class="tcent bline bpad15"><br>Contact Us</h2>
+    <div class="tcent tpad25 hvr hvr-glow bmar25">
+      <div class='tcent minwid200'>
+        <%= form_for(:contact, html: {class: "wid100per"}) do |f| %>
+          <%= f.text_field :nope, placeholder: 'Do not fill this in if you are a human' %>
+          <div class="row bpad15">
+            <%= f.text_field :first_name, placeholder: 'First name', class:"" %>
+          </div>
+          <div class="row bpad15">
+            <%= f.text_field :last_name, placeholder: 'Last name', class:"" %>
+          </div>
+          <div class="row bpad15">
+            <%= f.text_field :address, placeholder: 'Address', class:"" %>
+          </div>
+          <div class="row bpad15">
+            <%= f.text_field :email, placeholder: 'Email', class:"" %>
+          </div>
+          <div class="row bpad15">
+            <%= f.telephone_field :phone, placeholder: 'Phone: xxx-xxx-xxxx', class:"" %>
+          </div>
+          <div class="row bpad15">
+            <%= f.text_field :referral, placeholder: 'Referral?', class:"" %>
+          </div>
+          <div class="row bpad15">
+            <%= f.text_area :message, placeholder: 'How can we assist you today?', class:"" %>
+          </div>
+          <div class="g-recaptcha" data-sitekey="6LcT1VwUAAAAAIjYU9g4XW4v0sQtWEHw6F2KX-NM"></div>
+          <div class="row bpad15 hvr-sweep-to-right">
+            <%= f.submit "Submit", method: :create, class: "font2point5rem blackbutton2 hvr hvr-sweep-to-right pad15 lpad25 rpad25 tcent tmar15 bmar25 posrel tcent" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>

@@ -7,16 +7,14 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
 
-    if @contact.save
-      if @contact.nope?
-        redirect_to root_path
-      else
+    if @contact.save && @contact.nope.present?
+      flash.now[:notice] = 'You are a robot, you have no soul, and the soul of your creator is in jeopardy.  Repent and believe in Jesus Christ alone for salvation this very day.'
+
+    elsif @contact.save && @contact.nope = nil
         ApplicationMailer.contact(@contact).deliver_now
         flash.now[:notice] = 'Thank you for your message. We will contact you as soon as possible.'
-      end
     else
       flash.now[:error] = 'Cannot send message.'
-      render :new
     end
 
     redirect_to root_path
@@ -25,7 +23,7 @@ class ContactsController < ApplicationController
   private
 
   def contact_params
-    params.require(:contact).permit(:first_name, :last_name, :address, :phone, :email, :message, :referral)
+    params.permit(:first_name, :last_name, :address, :phone, :email, :message, :referral, :nope)
   end
 
 end
