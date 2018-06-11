@@ -1,5 +1,4 @@
 class ContactsController < ApplicationController
-  invisible_captcha on_spam: :spam_detected
 
   def new
     @contact = Contact.new
