@@ -9,7 +9,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
 
     if @contact.save && @contact.nope.present?
-      flash.now[:notice] = 'You are a robot, you have no soul, and the soul of your creator is in jeopardy.  Repent and believe in Jesus Christ alone for salvation this very day.'
+      flash.now[:notice] = 'You are a robot, you have no soul, but the soul of your creator is in jeopardy.  Repent and believe in Jesus Christ alone for salvation this very day.'
       exit
 
     else
@@ -24,7 +24,7 @@ class ContactsController < ApplicationController
   private
 
   def contact_params
-    params.permit(:first_name, :last_name, :address, :phone, :email, :message, :referral, :nope)
+    params.require(:contact).permit(:first_name, :last_name, :address, :phone, :email, :message, :referral, :nope)
   end
 
 end
