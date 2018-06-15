@@ -21,6 +21,12 @@
 @import "bootstrap";
 @import url("hover-min.css");
 
+.allwhite {
+  color: white;
+  background-color: white;
+  border: none!important;
+}
+
 #my-menu:not(.mm-menu) {
   display: none!important;
 }
