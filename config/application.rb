@@ -24,5 +24,8 @@ module AlwaysOnTheLevel
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # rack-attack protection enabled with this inclusion to the file
+    config.middleware.use Rack::Attack
   end
 end
