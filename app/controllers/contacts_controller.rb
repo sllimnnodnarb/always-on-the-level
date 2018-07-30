@@ -10,7 +10,7 @@ class ContactsController < ApplicationController
 
     #if @contact.save && @contact.nope.present?
       #flash.now[:notice] = 'You are a robot, you have no soul, but the soul of your creator is in jeopardy.  Repent and believe in Jesus Christ alone for salvation this very day.'
-      exit
+      #exit
     #else
       #ApplicationMailer.contact(@contact).deliver_now
       #flash.now[:notice] = 'Thank you for your message. We will contact you as soon as possible.'
