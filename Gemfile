@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
-gem 'rails', '~> 4.2.5'
+ruby '3.0.0'
+gem 'rails', '~> 6.1.0'
 
 group :production do
-  gem 'pg', '~> 0.20'
+  gem 'pg'
   gem 'rails_12factor'
 end
 
@@ -16,22 +17,22 @@ group :development, :test do
 end
 
 group :development do
-  gem 'web-console', '>= 3.3.0'
-  gem 'listen', '~> 3.0.5'
+  gem 'web-console'
+  gem 'listen'
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-watcher-listen'
 end
 
 gem 'animate-rails'
 gem 'bootstrap-sass'
 gem 'bcrypt'
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.2'
+gem 'sass-rails'
+gem 'uglifier'
+gem 'coffee-rails'
 gem 'jquery-rails'
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'puma', '~> 3.0'
+gem 'puma'
 gem 'mmenu-rails'
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'rack-attack'
