@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
-ruby '3.0.0'
-gem 'rails', '~> 6.1.0'
+ruby '3.4.2'
+gem 'rails', '~> 8.0.1'
 
 group :production do
   gem 'pg'
@@ -8,7 +8,7 @@ group :production do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails'
   gem 'sqlite3'
   gem 'pry-rails'
   gem 'shoulda'
